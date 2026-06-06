@@ -1,0 +1,55 @@
+{
+  "project_name": "ResearchPilot",
+  "project_title": "AI-Powered Research Agent Using IBM Watsonx and Granite Foundation Models",
+  "problem_statement": "Research Agent",
+  "domain": "Education and Research Assistance",
+  "description": "ResearchPilot is an AI-powered research assistant that enables users to upload research papers, perform semantic search, generate summaries, extract methodologies, and obtain document-grounded answers using Retrieval-Augmented Generation (RAG).",
+  "organization": "IBM SkillsBuild and Edunet Foundation",
+  "version": "1.0",
+  "status": "Completed",
+  "technologies": {
+    "platform": "IBM Watsonx.ai",
+    "foundation_model": "ibm/granite-8b-code-instruct",
+    "backend": "Python Flask",
+    "frontend": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "vector_database": "FAISS",
+    "architecture": "Retrieval-Augmented Generation (RAG)",
+    "embeddings": "HuggingFace Embeddings"
+  },
+  "features": [
+    "Research Paper Upload",
+    "PDF Text Extraction",
+    "Semantic Search",
+    "Vector-Based Retrieval",
+    "Research Paper Summarization",
+    "Question Answering",
+    "Methodology Extraction",
+    "Evidence-Based Responses",
+    "Multi-Document Analysis"
+  ],
+  "workflow": [
+    "Upload Research Papers",
+    "Extract Text",
+    "Generate Embeddings",
+    "Store Vectors in FAISS",
+    "Retrieve Relevant Context",
+    "Generate Responses with IBM Granite",
+    "Display Answer and Evidence"
+  ],
+  "repository_contents": [
+    "app.py",
+    "requirements.txt",
+    "templates/index.html",
+    "static/app.js",
+    "static/styles.css",
+    "data/papers",
+    "vectorstore",
+    "projectpresentation.pptx",
+    "problemstatement.pdf"
+  ],
+  "expected_outcome": "Assist researchers and students in exploring academic papers more efficiently through AI-powered retrieval and knowledge discovery."
+}
