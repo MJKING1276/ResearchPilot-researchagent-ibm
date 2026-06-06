@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ResearchPilot</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <p class="eyebrow">IBM Granite + LangChain RAG + FAISS</p>
+      <h1>ResearchPilot</h1>
+      <p class="subtitle">Upload research papers, ask natural-language questions, and generate summaries, comparisons, literature reviews, methodology notes, limitations, and source-grounded insights.</p>
+    </section>
+
+    <section class="workspace">
+      <section class="control-panel">
+        <form id="upload-form" class="upload-box">
+          <label for="papers">Upload research PDFs</label>
+          <input id="papers" name="papers" type="file" accept="application/pdf" multiple>
+          <button type="submit">Upload and Index</button>
+        </form>
+
+        <form id="query-form" class="query-panel">
+          <label for="question">Ask ResearchPilot</label>
+          <textarea id="question" name="question" rows="5" placeholder="Example: Summarize the Transformer paper, explain its methodology, and mention limitations or future work."></textarea>
+          <div class="actions">
+            <button type="submit">Ask Question</button>
+            <button type="button" id="reindex-button" class="secondary">Reindex PDFs</button>
+          </div>
+        </form>
+
+        <div class="paper-box">
+          <div class="section-title">
+            <h2>Papers</h2>
+            <span id="paper-count">0</span>
+          </div>
+          <div id="paper-list" class="paper-list empty">No papers loaded yet.</div>
+        </div>
+      </section>
+
+      <section class="answer-panel" aria-live="polite">
+        <div class="answer-header">
+          <h2>Answer</h2>
+          <span id="status">Ready</span>
+        </div>
+        <div id="answer" class="answer empty">Upload PDFs or use the papers already in data/papers, then ask a research question.</div>
+        <div id="sources" class="sources"></div>
+        <div id="evidence" class="evidence"></div>
+      </section>
+    </section>
+  </main>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
